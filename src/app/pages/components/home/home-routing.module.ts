@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
 
-const routes = [
+const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    children: [{ path: ':mode', redirectTo: '', pathMatch: 'full' }],
   },
 ];
 
