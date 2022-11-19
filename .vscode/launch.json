@@ -7,7 +7,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "url": "http://localhost:8080/"
     },
     {
       "name": "ng test",
@@ -16,20 +16,13 @@
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
     },
-    {
-      "name": "ng e2e",
-      "type": "chrome",
-      "request": "launch",
-      "preLaunchTask": "npm: e2e",
-      "url": "http://localhost:4200/"
-    },
-    {
-      "name": "npm start",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "port": 4200
-    }
+    // {
+    //   "name": "npm start",
+    //   "type": "node",
+    //   "request": "launch",
+    //   "runtimeExecutable": "npm",
+    //   "runtimeArgs": ["start"],
+    //   "port": 4200
+    // }
   ]
 }
