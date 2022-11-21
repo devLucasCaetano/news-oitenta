@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class TabsBarComponent implements OnInit {
   tabList = [
     { label: 'Home', link: 'home' },
-    { label: 'About', link: 'about' },
-    { label: 'Contact', link: 'contact' },
+    { label: 'Brasil', link: 'brazil' },
+    { label: 'Internacional', link: 'about' },
+    { label: 'Contato', link: 'contact' },
   ];
 
   constructor() {}
