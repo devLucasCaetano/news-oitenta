@@ -1,9 +1,14 @@
-import { HomeComponent } from './pages/components/home/home.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './core/components/auth/auth.component';
 
 const routes: Routes = [
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
   {
     path: 'auth',
     loadChildren: () => AuthComponent,
