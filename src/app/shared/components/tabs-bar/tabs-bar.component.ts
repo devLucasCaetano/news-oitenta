@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ITab } from 'src/app/models/tabs';
 
 @Component({
   selector: 'app-tabs-bar',
@@ -6,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs-bar.component.scss'],
 })
 export class TabsBarComponent implements OnInit {
-  tabList = [
-    { label: 'Home', link: 'home' },
-    { label: 'Brasil', link: 'brazil' },
-    { label: 'Internacional', link: 'about' },
-    { label: 'Contato', link: 'contact' },
-  ];
+  @Input() tabInputList: ITab[] = [];
 
-  constructor() {}
+  constructor(private _router : Router  ) {}
 
   ngOnInit(): void {}
+
+  tabClick(tabLink: string) {
+    this._router.navigate([tabLink]);
+  }
 }

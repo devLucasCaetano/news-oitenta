@@ -1,8 +1,8 @@
 <div class="content">
   <div class="tabs">
-    <div *ngFor="let tab of tabList" class="tabs-tab tab">
+    <div *ngFor="let tab of tabInputList" class="tabs-tab tab">
       <div class="tab-title">
-        <h1>{{ tab.label }}</h1>
+        <button (click)="tabClick(tab.link)">{{ tab.label }}</button>
       </div>
     </div>
   </div>

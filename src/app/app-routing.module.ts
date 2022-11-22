@@ -5,13 +5,37 @@ import { AuthComponent } from './core/components/auth/auth.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => HomeComponent
+    path: 'auth',
+    loadChildren: () => AuthComponent,
   },
   {
-    path: 'auth',
-    loadChildren: () => AuthComponent
-  }
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/components/home/home.module').then(
+        (m) => m.HomeModule
+      ),
+  },
+  {
+    path: 'brazil',
+    loadChildren: () =>
+      import('./pages/components/brazil/brazil.module').then(
+        (m) => m.BrazilModule
+      ),
+  },
+  {
+    path: 'international',
+    loadChildren: () =>
+      import('./pages/components/international/international.module').then(
+        (m) => m.InternationalModule
+      ),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./pages/components/contact/contact.module').then(
+        (m) => m.ContactModule
+      ),
+  },
 ];
 
 @NgModule({
