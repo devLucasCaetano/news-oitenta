@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: BrazilComponent,
+    children: [{ path: ':mode', redirectTo: '', pathMatch: 'full' }],
   },
 ];
 

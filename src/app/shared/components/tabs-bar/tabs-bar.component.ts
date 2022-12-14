@@ -16,5 +16,6 @@ export class TabsBarComponent implements OnInit {
 
   tabClick(tabLink: string) {
     this._router.navigate([tabLink]);
+    console.log(tabLink);
   }
 }
