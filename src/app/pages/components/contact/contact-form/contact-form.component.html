@@ -1,1 +1,18 @@
-<p>contact-form works!</p>
+<div class="content">
+  <div class="content-header">
+    Entre em contato para mais informações, dicas e sugestões.
+  </div>
+
+  <div class="content-body">
+    <form class="body-form">
+      <div class="form-conteudo" *ngFor="let input of CInput">
+        <app-custom-input
+          [label]="input.label"
+          [type]="input.type"
+          [placeholder]="input.placeholder"
+          [readonly]="input.readonly"
+        ></app-custom-input>
+      </div>
+    </form>
+  </div>
+</div>
