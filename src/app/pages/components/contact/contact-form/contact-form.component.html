@@ -4,8 +4,8 @@
   </div>
 
   <div class="content-body">
-    <form class="body-form">
-      <div class="form-conteudo" *ngFor="let input of CInput">
+    <form>
+      <div class="body-conteudo" *ngFor="let input of CInput">
         <app-custom-input
           [label]="input.label"
           [type]="input.type"
