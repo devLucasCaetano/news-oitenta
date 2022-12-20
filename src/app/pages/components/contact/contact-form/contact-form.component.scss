@@ -8,7 +8,7 @@
 
   &-header {
     padding-bottom: 20px;
-    color : gray;
+    color: gray;
     font-size: 22px;
   }
 
@@ -21,5 +21,12 @@
     border: solid 1px darkred;
     border-radius: 8px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    &-form,
+    .form {
+      &-conteudo {
+        max-width: 200px;
+      }
+    }
   }
 }
